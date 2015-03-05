@@ -1,0 +1,407 @@
+<!doctype html>
+<html class="home no-js" lang="">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="flat, clean, responsive, application frontend template built with bootstrap 3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- /meta -->
+
+    <title>Flytrack - безопасность полетов в зоне G</title>
+
+    <!-- page level plugin styles -->
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="plugins/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+    <!-- /page level plugin styles -->
+
+    <!-- core styles -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- /core styles -->
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="css/skin/blue.css" id="skin">
+    <link rel="stylesheet" href="css/fonts/opensans.css" id="font">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- template styles -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- load modernizer -->
+    <script src="plugins/modernizr.js"></script>
+</head>
+
+<!-- body -->
+
+<body>
+
+    <!-- page loading spinner -->
+    <div class="pageload">
+        <div class="loader"></div>
+    </div>
+    <!-- /page loading spinner -->
+
+    <!-- menu navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="heading-font">
+
+                <!-- branding -->
+                <div class="branding">
+                    <!-- toggle menu -->
+                    <button type="button" class="mobile-toggle">
+                        <span class="ti-menu"></span>
+                    </button>
+                    <!-- /toggle menu -->
+
+                    <a href="index.html" class="logo transition">
+                        Flytrack
+                    </a>
+                </div>
+                <!-- /branding -->
+
+                <!-- links -->
+                <div class="navigation spy">
+                    <ul class="nav">
+                        <li class="hide">
+                            <a href="#top"></a>
+                        </li>
+                        <li>
+                            <a href="#how">Как это работает?</a>
+                        </li>
+
+                        <li>
+                            <a href="home/signin.html">Вход</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="nav-btn btn btn-success btn-rounded">Регистрация</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /links -->
+            </nav>
+        </div>
+
+    </header>
+    <!-- /menu navigation -->
+
+    <!-- hero -->
+    <section id="top" class="content-section hero vertical-center parallax" style="background-image: url(img/cover1.jpg);">
+
+        <div class="video-background"></div>
+
+        <div class="overlay overlay-darken-2"></div>
+
+        <div class="container">
+            <div class="hero-container">
+                <h1 class="hero-title" data-animation="fadeInLeft">
+                    <b>
+                    Безопасность полетов в зоне G
+                </b>
+                </h1>
+                <div class="hero-sub-title" data-animation="fadeInRight">
+                    <em>
+                        Система №1 для отслеживания и планирования полетов в России
+                    </em>
+                </div>
+                <div class="call-to-action heading-font">
+                    <a href="#how" class="btn btn-white btn-lg btn-outline smooth-scroll">Узнать больше</a>
+                    <!--<a href="javascript:;" class="btn btn-white btn-lg">-->
+                        <!--<span>Buy now on themeforest</span>-->
+                    <!--</a>-->
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- /hero -->
+
+    <!-- how it works section -->
+
+    <style>
+        #phoneDiv{
+            cursor: pointer;
+            position: absolute;
+            top: 38%;
+            left: 23%;
+            display: block;
+            width: 7%;
+            height: 26%;
+            /*border: 1px solid red;*/
+            background: lightblue;
+            opacity: 0.6;
+        }
+
+        #satellite.hoverPanel:hover, #phoneDiv.hoverPanel:hover, #dispatcher.hoverPanel:hover, #cloud.hoverPanel:hover{
+            background: lightcoral;
+        }
+
+
+        #satellite{
+            cursor: pointer;
+            position: absolute;
+            top: 1%;
+            left: 45%;
+            display: block;
+            width: 11%;
+            height: 17%;
+            /*border: 1px solid red;*/
+            background: lightblue;
+            opacity: 0.6;
+        }
+
+        #dispatcher{
+            cursor: pointer;
+            position: absolute;
+            top: 83%;
+            left: 59%;
+            display: block;
+            width: 31%;
+            height: 42%;
+            /*border: 1px solid red;*/
+            background: lightblue;
+            opacity: 0.6;
+        }
+
+        #cloud{
+            cursor: pointer;
+            position: absolute;
+            top: 85%;
+            left: 19%;
+            display: block;
+            width: 30%;
+            height: 33%;
+            /*border: 1px solid red;*/
+            background: lightblue;
+            opacity: 0.6;
+        }
+
+        .modal-dialog{
+            margin-top: 10%;
+        }
+
+    </style>
+
+    <section id="how" class="content-section">
+        <div class="container">
+
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section-title">
+                    <h5 class="heading" data-animation="fadeInDown" data-appear-top-offset="-200">
+                        <em>как это работает</em>
+                    </h5>
+                    <!--<h4 class="sub-heading" data-animation="fadeInUp" data-appear-top-offset="-190">What you need to know about <span class="color">Sublime App</span></h4>-->
+                </div>
+            </div>
+
+            <div class="row text-center" style="position: relative; display: block; margin: 0 auto; min-width: 800px; min-height: 600px;" >
+
+                <img src="img/scheme.jpg" style="position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px;" />
+
+
+                <div id="phoneDiv" data-toggle="modal" data-target="#phoneModal" class="hoverPanel" style=" " ></div>
+                <div id="satellite" data-toggle="modal" data-target="#satelliteModal" class="hoverPanel" style=" " ></div>
+                <div id="dispatcher" data-toggle="modal" data-target="#dispatcherModal" class="hoverPanel" style=" " ></div>
+                <div id="cloud" data-toggle="modal" data-target="#cloudModal" class="hoverPanel" style=" " ></div>
+
+            </div>
+        </div>
+    </section>
+    <!-- /how it works section -->
+
+    <!--&lt;!&ndash; subscribe section &ndash;&gt;-->
+    <!--<section class="content-section banner bg-color text-white color-inherit text-center">-->
+        <!--<div class="container">-->
+            <!--<div class="section-title mb0">-->
+                <!--<h4 data-animation="fadeInUp" data-appear-top-offset="-190">Subscribe to our newsletter</h4>-->
+
+            <!--</div><small>Lorem ipsum dolor sit amet, modus impedit pertinax vix ne, quem intellegat duo ex.</small>-->
+
+            <!--<div class="row">-->
+                <!--<div class="col-md-4 col-md-offset-4">-->
+                    <!--<form method="post" role="form" action="inc/subscribe.php" name="subscribeform" id="subscribeform">-->
+
+                        <!--<div style="display:none;visibility:hidden">-->
+                            <!--<input type="text" id="check" name="check">-->
+                        <!--</div>-->
+
+                        <!--<div class="input-group mb15 mt25">-->
+                            <!--<input type="email" class="form-control input-lg no-b" id="email" name="email" placeholder="Your email address" required>-->
+                            <!--<span class="input-group-btn">-->
+                                <!--<button type="submit" class="btn btn-success btn-lg subscribe" data-loading-text="Adding to our list ...">-->
+                                    <!--<span>Subscribe</span>-->
+                            <!--<i class="ti-arrow-circle-right ml15"></i>-->
+                            <!--</button>-->
+                            <!--</span>-->
+                        <!--</div>-->
+
+                        <!--&lt;!&ndash; subscribe form alert box container &ndash;&gt;-->
+                        <!--<div class="subscribe-message">-->
+                            <!--<div class="response" id="response"></div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; /subscribe form alert box container &ndash;&gt;-->
+
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</section>-->
+    <!-- subscribe section -->
+
+    <!-- footer -->
+    <footer class="content-section">
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <!--<div class="col-sm-12 mb25">-->
+
+                    <!--<a class="btn btn-primary btn-social-icon btn-rounded btn-outline btn-sm smooth-scroll mb25" href="#top">-->
+                        <!--<i class="ti-angle-up"></i>-->
+                    <!--</a>-->
+
+                    <!--<br>-->
+
+                    <!--<a class="btn btn-social-icon btn-facebook btn-rounded btn-sm ml5 mr5" href="javascript:;">-->
+                        <!--<i class="fa fa-facebook"></i>-->
+                    <!--</a>-->
+
+                    <!--<a class="btn btn-social-icon btn-twitter btn-rounded btn-sm ml5 mr5" href="javascript:;">-->
+                        <!--<i class="fa fa-twitter"></i>-->
+                    <!--</a>-->
+
+                    <!--<a class="btn btn-social-icon btn-google-plus btn-rounded btn-sm ml5 mr5" href="javascript:;">-->
+                        <!--<i class="fa fa-google-plus"></i>-->
+                    <!--</a>-->
+
+                <!--</div>-->
+
+                <div class="col-sm-12 mb25">
+                    <!--<p>Made with&nbsp;<i class="ti-heart text-danger"></i>&nbsp;in Paris France</p>-->
+                    <small class="show">&copy;&nbsp;Copyright Flytrack&nbsp;LLC&nbsp;<span class="year"></span>. All rights reserved</small>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade bs-modal-sm" id="phoneModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title nameWidget"  >Приложение на телефон</h4>
+                </div>
+                <div class="modal-body">
+                    Каждый пилот скачиват приложение на телефон
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-modal-sm" id="dispatcherModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title nameWidget" >Диспетчер</h4>
+                </div>
+                <div class="modal-body">
+                    Диспетчер с компьютера может посмотреть положение всех самолетов
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-modal-sm" id="cloudModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title nameWidget" >Интернет</h4>
+                </div>
+                <div class="modal-body">
+                    Все данные о полетах хранятся в защищенном личном кабинете пилота на сайте
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-modal-sm" id="satelliteModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title nameWidget" >Спутник</h4>
+                </div>
+                <div class="modal-body">
+                    Координаты каждого пилота опрелеляются по спутнику
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /footer -->
+
+    <!-- core scripts -->
+    <script src="plugins/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="plugins/appear/jquery.appear.js"></script>
+    <script src="plugins/nav/jquery.nav.js"></script>
+    <script src="plugins/jquery.easing.min.js"></script>
+    <!-- /core scripts -->
+
+    <!-- page level scripts -->
+    <script src="plugins/jquery.parallax.js"></script>
+    <script src="plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="plugins/count-to/jquery.countTo.js"></script>
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="plugins/background-video/jquery.backgroundvideo.min.js"></script>
+    <!-- /page level scripts -->
+
+    <!-- template scripts -->
+    <script src="js/main.js"></script>
+    <!-- /template scripts -->
+
+    <!-- page script -->
+    <script src="js/subscribe.js"></script>
+    <script src="js/demo_home.js"></script>
+
+    <script type="text/javascript">
+        var videobackground = new $.backgroundVideo($('.video-background'), {
+                "align" : "centerXY",
+                "path" : "video/",
+                "width": 1280,
+                "height": 720,
+                "filename" : "work",
+                "types" : ["mp4", "ogg", "webm"]
+            });
+    </script>
+    <!-- /page script -->
+
+</body>
+
+</html>

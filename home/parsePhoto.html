@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    
+    <script src="plugins/jquery-1.11.1.min.js" ></script>
+    <script src="js/parse-1.2.18.min.js" ></script>
+    <script src="js/custom/common.js" ></script>
+    <script src="js/custom/CompressorManager.js" ></script>
+    <script src="js/custom/FileManager.js" ></script>
+
+</head>
+<body>
+
+<input type="file" name="fileselect" id="fileselect" />
+
+
+<div id="photosList">
+
+</div>
+
+
+
+<!--</form>-->
+
+<script type="text/javascript">
+    $(function() {
+        PM = new FileManager();
+        PM.init();
+    });
+</script>
+
+</body>
+</html>

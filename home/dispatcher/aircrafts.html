@@ -1,0 +1,299 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="Flat, Clean, Responsive, application admin template built with bootstrap 3">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /meta -->
+
+    <title>Авиасудна</title>
+
+    <!-- page level plugin styles -->
+    <!-- /page level plugin styles -->
+
+    <!-- core styles -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <!-- /core styles -->
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="../css/skins/palette.css">
+    <link rel="stylesheet" href="../css/fonts/font.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- template styles -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- load modernizer -->
+    <script src="../plugins/modernizr.js"></script>
+</head>
+
+<!-- body -->
+
+<body>
+
+
+<div class="cover" style="background-image: url(img/cover1.jpg)"></div>
+<div class="overlay bg-color"></div>
+
+<div class="app horizontal-layout ">
+    <!-- top header -->
+    <header class="header header-fixed navbar">
+
+        <div class="brand">
+            <!-- toggle offscreen menu -->
+            <a href="javascript:;" class="ti-menu off-left visible-xs" data-toggle="offscreen" data-move="ltr"></a>
+            <!-- /toggle offscreen menu -->
+
+            <!-- logo -->
+            <a href="../index.html" class="navbar-brand">
+                <img src="../img/logo_mini.png" alt="">
+                    <span class="heading-font">
+                        Flytrack <sup>Диспетчер</sup>
+                    </span>
+            </a>
+            <!-- /logo -->
+        </div>
+
+        <ul class="nav navbar-nav">
+
+            <li class="hidden-xs ">
+                <a href="index.html" class="">
+                    <i class="ti-target"></i>
+                    Мониторинг
+                </a>
+            </li>
+
+            <li class="hidden-xs ">
+                <a href="users.html" class="">
+                    <i class="ti-user"></i>
+                    Пилоты
+                </a>
+                <li class="hidden-xs ">
+
+                    <a href="javascript: void(0);" class="">
+                        <i class="ti-location-arrow"></i>
+                        Авиасудна
+                    </a>
+                </li>
+
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li>
+                <a href="javascript:;" data-toggle="offscreen" data-move="rtl">
+                    <i class="ti-plus animated flash"></i>
+                    <i class="ti-location-arrow animated flash"></i>
+                    <span class="animated flash">Добавить авиасудно</span>
+                </a>
+            </li>
+
+        </ul>
+    </header>
+    <!-- /top header -->
+
+    <section class="layout">
+
+        <!-- main content -->
+        <section class="main-content">
+
+            <!-- content wrapper -->
+            <div class="content-wrap">
+
+                <!-- inner content wrapper -->
+                <div class="wrapper no-p">
+
+                    <div class="wrapper" id="aircraftsCards"  >
+                    </div>
+
+                </div>
+                <!-- /inner content wrapper -->
+
+            </div>
+            <!-- /content wrapper -->
+            <a class="exit-offscreen"></a>
+        </section>
+
+
+        <!-- /main content -->
+
+
+        <!-- chat panel -->
+        <aside class="chat-sidebar offscreen-right bg-white">
+            <div class="content-wrap">
+                <div class="wrapper">
+                    <div class="slimscroll" data-height="auto" data-size="6px" data-distance="0">
+
+                            <div class="h4 pl5"><b>Новое авиасудно</b>
+                            </div>
+
+
+                        <div class="p5 createNewUserBlock">
+                            <div class="">
+                                <input type="text" id="name" class="form-control mb5" placeholder="Название"/>
+                                <input type="text" id="aircraftId" class="form-control mb5" placeholder="Номер"/>
+                                <input type="text" id="callName" class="form-control mb5" placeholder="Позывной"/>
+
+                                <h4 class="h6 text-muted">Тип авиасудна</h4>
+
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="aircraftType" id="optionsRadios1" value="plane" checked>
+                                        самолет
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="aircraftType" id="optionsRadios2" value="glider">
+                                        планер
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="aircraftType" id="optionsRadios3" value="gyroplane">
+                                        автожир
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="aircraftType" id="optionsRadios4" value="helicopter">
+                                        вертолет
+                                    </label>
+                                </div>
+
+
+                            </div>
+                            <br/>
+                            <button  id="createButton" class="btn btn-primary btn-lg btn-block">Создать</button>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+        <!-- /chat panel -->
+
+
+    </section>
+
+</div>
+
+
+
+<div class="gallery-loader hide">
+    <div class="loader"></div>
+</div>
+
+
+
+<div class="modal fade bs-modal-sm" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Редактирование информации</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label>Название</label>
+                        <input type="text" class="form-control" id="editName" placeholder="Название">
+                    </div>
+                    <div class="col-xs-12">
+                        <label>Номер</label>
+                        <input type="text" class="form-control" id="editAircraftId" placeholder="Название">
+                    </div>
+                    <div class="col-xs-12">
+                        <label>Позывной</label>
+                        <input type="text" class="form-control" id="editCallName" placeholder="Позывной">
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="editAircraftType" id="editOptionsRadios1" value="plane" >
+                                самолет
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="editAircraftType" id="editOptionsRadios2" value="glider">
+                                планер
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="editAircraftType" id="editOptionsRadios3" value="gyroplane">
+                                автожир
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="editAircraftType" id="editOptionsRadios4" value="helicopter">
+                                вертолет
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <button type="button" id="updateButton" class="btn btn-success">Обновить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- core scripts -->
+<script src="../plugins/jquery-1.11.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../plugins/jquery.slimscroll.min.js"></script>
+<script src="../plugins/jquery.easing.min.js"></script>
+<script src="../plugins/appear/jquery.appear.js"></script>
+<script src="../plugins/jquery.placeholder.js"></script>
+<script src="../plugins/fastclick.js"></script>
+<!-- /core scripts -->
+
+<!-- page level scripts -->
+<!-- /page level scripts -->
+
+<!-- template scripts -->
+<script src="../js/offscreen.js"></script>
+<script src="../../home/js/custom/common.js"></script>
+<script src="../js/parse-1.2.18.min.js"></script>
+<script src="js/AircraftManager.js"></script>
+<script src="../js/main.js"></script>
+<!-- /template scripts -->
+
+<script>
+    $(function(){
+        AM = new AircraftManager();
+        AM.init();
+    });
+
+</script>
+
+
+</body>
+<!-- /body -->
+
+</html>

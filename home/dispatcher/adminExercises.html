@@ -1,0 +1,243 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="Flat, Clean, Responsive, application admin template built with bootstrap 3">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /meta -->
+
+    <title>Exercises manager</title>
+
+    <!-- page level plugin styles -->
+    <!-- /page level plugin styles -->
+
+    <!-- core styles -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/themify-icons.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <!-- /core styles -->
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="../css/skins/palette.css">
+    <link rel="stylesheet" href="../css/fonts/font.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- template styles -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- load modernizer -->
+    <script src="../plugins/modernizr.js"></script>
+</head>
+
+<!-- body -->
+
+<body>
+<div class="app">
+<!-- top header -->
+<header class="header header-fixed navbar">
+
+    <div class="brand">
+        <!-- toggle offscreen menu -->
+        <a href="javascript:;" class="ti-menu off-left visible-xs" data-toggle="offscreen" data-move="ltr"></a>
+        <!-- /toggle offscreen menu -->
+
+        <!-- logo -->
+        <a href="../index.html" class="navbar-brand">
+            <img src="../img/logo_mini.png" alt="">
+                    <span class="heading-font">
+                        English Patient <sup>Admin</sup>
+                    </span>
+        </a>
+        <!-- /logo -->
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+
+
+            <li class="hidden-xs">
+
+                <a href="userManagement.html;" class="">
+                    <i class="ti-user"></i>
+                </a>
+
+            </li>
+
+
+        <li class="visible-xs">
+            <a href="javascript:;" data-toggle="offscreen" data-move="rtl">
+                <i class="ti-comment-alt"></i>
+                <div class="badge badge-top bg-danger animated flash">
+                    <span>9</span>
+                </div>
+            </a>
+        </li>
+
+        <li class="notifications dropdown">
+            <a href="javascript:;" data-toggle="dropdown">
+                <i class="ti-upload"></i>
+            </a>
+            <div class="dropdown-menu animated fadeInLeft">
+                <div class="panel panel-default no-m">
+                    <div class="panel-heading small"><b>Загрузка файла</b>
+                    </div>
+                    <div>
+                        <iframe style="width: 100%; height: 70px;" src="http://disk.englishpatient.org/u.html" ></iframe>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+</header>
+<!-- /top header -->
+
+<section class="layout">
+<!-- sidebar menu -->
+<!-- /sidebar menu -->
+
+<!-- main content -->
+<section class="main-content">
+
+    <!-- content wrapper -->
+    <div class="content-wrap">
+
+        <!-- inner content wrapper -->
+        <div class="wrapper">
+
+
+            <div class="view-list" id="exercisesList">
+
+                loading...
+
+            </div>
+
+
+
+
+        </div>
+        <!-- /inner content wrapper -->
+
+    </div>
+    <!-- /content wrapper -->
+
+
+
+    <a class="exit-offscreen"></a>
+</section>
+<!-- /main content -->
+
+<!-- chat panel -->
+<aside class="sidebar-300 offscreen-right bg-white">
+    <div class="content-wrap">
+        <div class="wrapper">
+            <div class="slimscroll" data-height="auto" data-size="6px" data-distance="0">
+                <div class="pt15 pl15 pr15 pb0 clearfix text-center">
+                    <h3 class="mt0">
+                        <span class="small">
+                            Новое упражнение
+                        </span>
+                    </h3>
+                </div>
+
+                <div class="p5">
+                    <input class="form-control" type="text" id="newExName" placeholder="Название нового упражнения"  />
+                    <br/>
+                    <input class="form-control" type="text" id="newExImageUrl" placeholder="ссылка на аватарку упражнения"  />
+                    <br/>
+                    <textarea class="form-control" id="newExDescription" placeholder="Описание упражнения" ></textarea>
+                     <br/>
+                    <textarea class="form-control" id="newExTask" placeholder="Описание задания"></textarea>
+                    <br/>
+                    <button class="btn pull-right" id="createNewExButton">Create</button>
+                    <br/>
+                    <br/>
+                </div>
+
+                <hr/>
+
+                <div class="clearfix"></div>
+
+                <div class="p5 hide" id="editingBlock" >
+                    <div class="pt0 pl15 pr15 pb0 clearfix text-center">
+                        <h3 class="mt0">
+                        <span class="small">
+                            Редактировать упражнение
+                        </span>
+                        </h3>
+                    </div>
+
+                    <input class="form-control" type="text" id="editName" placeholder="Название нового упражнения"  />
+                    <br/>
+                    <input class="form-control" type="text" id="editImageUrl" placeholder="ссылка на аватарку упражнения"  />
+                    <br/>
+                    <textarea class="form-control" id="editDescription" placeholder="Описание упражнения" ></textarea>
+                    <br/>
+                    <textarea class="form-control" id="editTask" placeholder="Описание задания"></textarea>
+                    <br/>
+
+                    <button class="btn pull-right" id="editSaveButton">Save</button>
+                    <br/>
+                    <hr/>
+                    <button class="btn btn-danger" id="deleteButton" >Delete</button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- /chat panel -->
+
+</section>
+
+</div>
+
+
+<div class="gallery-loader hide">
+    <div class="loader"></div>
+</div>
+
+
+<!-- core scripts -->
+<script src="../plugins/jquery-1.11.1.min.js"></script>
+<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../plugins/jquery.slimscroll.min.js"></script>
+<script src="../plugins/jquery.easing.min.js"></script>
+<script src="../plugins/appear/jquery.appear.js"></script>
+<script src="../plugins/jquery.placeholder.js"></script>
+<script src="../plugins/fastclick.js"></script>
+<!-- /core scripts -->
+
+<!-- page level scripts -->
+<!-- /page level scripts -->
+
+<!-- template scripts -->
+<script src="../js/offscreen.js"></script>
+<script src="../../home/js/custom/common.js"></script>
+<script src="../js/parse-1.2.18.min.js"></script>
+<script src="js/AdminExercisesManager.js"></script>
+<script src="../js/main.js"></script>
+<!-- /template scripts -->
+
+<script>
+    $(function(){
+        AEM = new AdminExercisesManager();
+        AEM.init();
+    });
+
+</script>
+
+
+</body>
+<!-- /body -->
+
+</html>

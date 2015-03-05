@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="home/plugins/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+
+<div id="myCountDown">
+
+</div>
+
+<script>
+    var CountDown = function(){
+        var self = this;
+        this.value = 10 * 1000;
+        this.dt = 1000;
+        this.intervalId = undefined;
+        this.divId = 'myCountDown';
+
+        this.init = function(){
+            self.initCountdown();
+        }
+
+        this.initCountdown = function(){
+            self.intervalId = setInterval(self.onTick, self.dt);
+        }
+
+        this.onTick = function(){
+            self.value = self.value - self.dt;
+
+            console.log(self.value);
+            $('#' + self.divId).html(self.value / 1000.0);
+        }
+
+
+        this.onFinish = function(){
+
+        }
+
+    }
+
+
+    $(function(){
+        CD = new CountDown();
+        CD.init();
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="Flat, Clean, Responsive, application admin template built with bootstrap 3">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <!-- /meta -->
+
+    <title>Exercise</title>
+
+    <!-- page level plugin styles -->
+    <!-- /page level plugin styles -->
+
+    <!-- core styles -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <!-- /core styles -->
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="css/skins/palette.css">
+    <link rel="stylesheet" href="css/fonts/font.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- template styles -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- load modernizer -->
+    <script src="plugins/modernizr.js"></script>
+</head>
+
+<!-- body -->
+
+<body>
+<div class="app">
+<!-- top header -->
+<header class="header header-fixed navbar">
+
+    <div class="brand">
+        <!-- toggle offscreen menu -->
+        <a href="javascript:;" class="ti-menu off-left visible-xs" data-toggle="offscreen" data-move="ltr"></a>
+        <!-- /toggle offscreen menu -->
+
+        <!-- logo -->
+        <a href="index.html" class="navbar-brand">
+            <img src="img/logo_mini.png" alt="">
+                    <span class="heading-font">
+                        English Patient
+                    </span>
+        </a>
+        <!-- /logo -->
+    </div>
+
+
+    <ul class="nav navbar-nav navbar-right">
+
+
+        <li class="hidden-xs">
+
+            <a href="index.html" class="">
+                <i class="ti-menu"></i>
+            </a>
+
+        </li>
+
+        <li class="visible-xs">
+            <a href="javascript:;" data-toggle="offscreen" data-move="rtl">
+                <i class="ti-comment-alt"></i>
+                <div class="badge badge-top bg-danger animated flash">
+                    <span>9</span>
+                </div>
+            </a>
+        </li>
+
+
+        <li class="off-right">
+            <a href="javascript:;" data-toggle="dropdown">
+                <!--<img src="img/faceless.jpg" class="header-avatar img-circle" alt="user" title="user">-->
+                <span class="hidden-xs ml10 username"  >UserName</span>
+                <i class="ti-angle-down ti-caret hidden-xs"></i>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight">
+
+                <li>
+                    <a href="javascript: void(0);" class="logoutLink" >logout</a>
+                </li>
+            </ul>
+        </li>
+
+
+    </ul>
+</header>
+<!-- /top header -->
+
+<section class="layout">
+<!-- sidebar menu -->
+<!-- /sidebar menu -->
+
+<!-- main content -->
+<section class="main-content">
+
+    <!-- content wrapper -->
+    <div class="content-wrap">
+
+        <!-- inner content wrapper -->
+        <div class="wrapper">
+
+            <h3 class="pt0 mt0 mb5 exerciseName text-center" id="exerciseName" >
+
+            </h3>
+
+            <div class="text-center mt0" >
+                <ul class="pagination pagination-sm mt0 mb0" id="exercisesNumbersBlock"  >
+                    loading...
+                </ul>
+            </div>
+
+            <div class="taskPlaceholder">
+                <div id="videoPlaceholder" class="text-center col-md-12 mediaMaterial">
+                </div>
+
+                <div id="imagePlaceholder" class="text-center col-md-12 mediaMaterial">
+                </div>
+
+                <div id="audioPlaceholder" class="text-center col-md-12 mt5 mediaMaterial">
+                </div>
+
+                <div id="textPlaceholder" class="text-center col-md-12 mediaMaterial">
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /inner content wrapper -->
+
+    </div>
+    <!-- /content wrapper -->
+
+    <footer class="bt">
+        <div class="form-input clearfix mt10 mb10">
+            <div class="input-group">
+                <input type="text" class="form-control input-sm" placeholder="Ваш ответ ...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default btn-sm" type="button">
+                                    <!--<i class="ti-arrow-right"></i>-->
+                                    Ответить
+                                </button>
+                            </span>
+            </div>
+        </div>
+    </footer>
+
+    <a class="exit-offscreen"></a>
+</section>
+<!-- /main content -->
+
+<!-- chat panel -->
+<aside class="sidebar-300 offscreen-right bg-white">
+    <div class="content-wrap">
+        <div class="wrapper">
+            <div class="slimscroll" data-height="auto" data-size="6px" data-distance="0">
+                <div class="pt15 pl15 pr15 pb0 clearfix text-center">
+                    <h3 class="mt0">
+                        <span class="small">
+                            Задание
+                        </span>
+                    </h3>
+                </div>
+
+                <div class="p5 text-center exerciseTask ">
+
+                </div>
+
+                <!--<div class="pt15 pl15 pr15 pb0">-->
+                    <!--<div class="h6 text-muted text-center"><b>Подсказки</b>-->
+                    <!--</div>-->
+                    <!--<div class="h5 text-center cardHint">-->
+
+                    <!--</div>-->
+                </div>
+
+                <!--<div class="pt15 pl15 pr15 pb0">-->
+                    <!--<div class="h6 text-muted text-center"><b>Чат с преподавателем</b>-->
+                    <!--</div>-->
+                    <!--<div class="h5 text-center">-->
+                        <!--Блок с подсказками-->
+                    <!--</div>-->
+                <!--</div>-->
+
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- /chat panel -->
+
+</section>
+
+</div>
+
+
+
+
+<div class="gallery-loader hide">
+    <div class="loader"></div>
+</div>
+
+<!-- core scripts -->
+<script src="plugins/jquery-1.11.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="plugins/jquery.slimscroll.min.js"></script>
+<script src="plugins/jquery.easing.min.js"></script>
+<script src="plugins/appear/jquery.appear.js"></script>
+<script src="plugins/jquery.placeholder.js"></script>
+<script src="plugins/fastclick.js"></script>
+
+
+
+<script src="js/parse-1.2.18.min.js"></script>
+<script src="js/custom/common.js"></script>
+<script src="js/custom/CurrentUserManager.js"></script>
+
+
+<script src="js/custom/AudioMaterial.js"></script>
+<script src="js/custom/VideoMaterial.js"></script>
+<script src="js/custom/TextMaterial.js"></script>
+<script src="js/custom/ImageMaterial.js"></script>
+
+<script src="js/custom/QuizManager.js"></script>
+
+
+<!-- /core scripts -->
+
+<!-- page level scripts -->
+<!-- /page level scripts -->
+
+<!-- template scripts -->
+<script src="js/offscreen.js"></script>
+<script src="js/main.js"></script>
+<!-- /template scripts -->
+
+<script type="text/javascript">
+    $(function(){
+        QM = new QuizManager();
+        QM.init();
+    });
+</script>
+
+<!-- page script -->
+<!-- /page script -->
+
+</body>
+<!-- /body -->
+
+</html>

@@ -1,0 +1,75 @@
+.aircraftAvatar{
+    max-height: 85px;
+}
+
+.aircraftName{
+    cursor: pointer;
+}
+
+.aircraftName:hover{
+    opacity: 0.7;
+    color: firebrick;
+}
+
+.aircraftImgPlaceholder img{
+    width: 20px;
+    height: 20px;
+    opacity: 0.8;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 5px;
+    border: none !important;
+    /*background-color: red;*/
+}
+
+.aircraftOverlay.glider .aircraftImgPlaceholder img{
+    /*background-color: red;*/
+    border: 1px solid red;
+
+}
+
+.aircraftOverlay.plane .aircraftImgPlaceholder img{
+    /*background-color: blue;*/
+    border: 1px solid blue;
+}
+
+.aircraftOverlay.gyroplane .aircraftImgPlaceholder img{
+    /*background-color: green;*/
+    border: 1px solid green;
+}
+
+.aircraftOverlay.helicopter .aircraftImgPlaceholder img{
+    /*background-color: black;*/
+    border: 1px solid black;
+}
+
+li .updatedTime{
+    color: #808080;
+    background-color: floralwhite;
+    font-style: italic;
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+}
+
+li.offline{
+    background-color: lightgray;
+}
+
+li.online{
+    background-color: lightgreen;
+}
+
+img.aImg{
+    width: 30px;
+    height: 20px;
+}
+
+li .updatedTimePlaceholder{
+    width: 70px;
+    display: inline-block;
+}
+
+#monitoringLayout{
+    height: calc(100% - 30px) !important;
+}
