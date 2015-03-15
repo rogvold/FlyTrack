@@ -177,7 +177,7 @@ var MonitoringManager = function(){
     this.getAircraftOverlayHtml = function(a){
         var s = '';
         s+='<span class="aircraftOverlay ' + a.get('aircraftType') + '" >' +
-            '<span class="aircraftImgPlaceholder"><img src="img/' + a.get('aircraftType') + '.png" /></span>' +
+            '<span class="aircraftImgPlaceholder"><img style="width: 50px; height: auto; top: -25px; left: -25px;" src="img/' + a.get('aircraftType') + '.png" /></span>' +
             '</span>';
         return s;
     }

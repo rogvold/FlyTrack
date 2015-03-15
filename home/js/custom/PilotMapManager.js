@@ -12,9 +12,14 @@ var PilotMapManager = function(){
     this.path = [];
     this.overlay = undefined;
     this.marker = undefined;
+    this.arrowsAlongPathEnabled = true;
 
     this.selectionPoints = [];
     this.selectionPath = [];
+
+    this.init = function(divId){
+        self.initMap(divId);
+    }
 
     this.initMap = function(divId){
         if (divId != undefined){
@@ -27,23 +32,27 @@ var PilotMapManager = function(){
         });
     }
 
-    this.init = function(divId){
-        self.initMap(divId);
-    }
+
 
     this.clearAllPoints = function(){
 
     }
 
-    this.updatePoints = function(points){
+    this.updatePoints = function(points, color){
+        if (color == undefined){
+            color = '#131540';
+        }
         self.removeMarker();
         self.removeOverlay();
         self.map.removePolylines();
         self.points = points;
         self.path = self.points.map(function(p){return [p.get('lat'), p.get('lon')]});
-        self.polyline = self.addPolyline(self.path, '#131540');
+        self.polyline = self.addPolyline(self.path, color);
         self.fitPolylines();
-        self.drawArrowsAlongPath(points);
+
+        if (self.arrowsAlongPathEnabled == true){
+            self.drawArrowsAlongPath(points);
+        }
     }
 
     this.addPolyline = function(path, color){

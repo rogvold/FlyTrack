@@ -104,7 +104,6 @@ var MapManager = function(){
         return overlay;
     }
 
-
     this.fitOverlays = function(){
         var list = [];
         var map = self.overlaysCoordsMap;
@@ -121,6 +120,5 @@ var MapManager = function(){
         console.log(maxLat, maxLon, minLat, minLon);
         self.map.fitLatLngBounds([new google.maps.LatLng(maxLat, maxLon), new google.maps.LatLng(minLat, minLon)]);
     }
-
 
 }

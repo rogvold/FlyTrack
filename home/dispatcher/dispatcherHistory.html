@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
     <!-- /meta -->
 
-    <title>Мониторинг</title>
+    <title>Разбор полетов</title>
 
     <!-- page level plugin styles -->
     <!-- /page level plugin styles -->
@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../plugins/bootstrap-datepicker/css/bootstrap-datepicker.css">
     <!-- template styles -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -78,13 +79,6 @@
             </li>
 
             <li class="hidden-xs ">
-                <a href="dispatcherHistory.html" class="">
-                    <i class="ti-alarm-clock"></i>
-                    Разбор полетов
-                </a>
-            </li>
-
-            <li class="hidden-xs ">
                 <a href="users.html" class="">
                     <i class="ti-user"></i>
                     Пилоты
@@ -121,15 +115,40 @@
                 <div class="wrapper">
                     <div class="slimscroll" data-height="auto" data-size="6px" data-distance="0">
 
-
-
                         <div class="" id="pilotsPanel" >
+                            <h5 class="p10">
+                                Выберите дату для просмотра
+                            </h5>
+
+                            <div style="" >
+
+                                <input type="text" id="datepicker" class="form-control">
+
+
+                            </div>
+
+                            <div style="padding-left: 15px; margin-bottom: 5px; margin-top: 5px;">
+                                Время: <span id="currentTimePlaceholder" ></span>
+                                <span>
+                                    <button class="btn btn-xs btn-default" id="pauseButton" >поставить на паузу</button>
+                                </span>
+                            </div>
+
+                            <div style="padding-left: 15px;">
+                                Скорость:
+                                <div class="btn-group" role="group" aria-label="...">
+                                    <button type="button" data-speed="1" class="speedButton btn-xs btn-instagram btn btn-default">1x</button>
+                                    <button type="button" data-speed="10"  class="speedButton btn-xs btn btn-default">10x</button>
+                                    <button type="button" data-speed="50"  class="speedButton btn-xs btn btn-default">50x</button>
+                                    <button type="button" data-speed="100"  class="speedButton btn-xs btn btn-default">100x</button>
+                                </div>
+                            </div>
+
+
                             <ul class="list-style-none p0 " id="pilotsList" >
                                 <li class="p10  bb">
-                                    загрузка...
+                                    <!--загрузка...-->
                                 </li>
-
-
                             </ul>
                         </div>
                     </div>
@@ -245,6 +264,7 @@
 
 <!-- core scripts -->
 <script src="../plugins/jquery-1.11.1.min.js"></script>
+
 <script src="../bootstrap/js/bootstrap.js"></script>
 <script src="../plugins/jquery.slimscroll.min.js"></script>
 <script src="../plugins/jquery.easing.min.js"></script>
@@ -253,6 +273,7 @@
 <script src="../plugins/appear/jquery.appear.js"></script>
 <script src="../plugins/jquery.placeholder.js"></script>
 <script src="../plugins/fastclick.js"></script>
+
 <!-- /core scripts -->
 
 <!-- page level scripts -->
@@ -266,22 +287,27 @@
 <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
 <script src="../js/moment.js"></script>
 <script src="../js/gmaps.js"></script>
+<script src="../plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="../plugins/bootstrap-datepicker/locales/bootstrap-datepicker.ru.min.js"></script>
 
+<script src="js/DatePickerManager.js"></script>
 <script src="js/SimulationManager.js"></script>
 <script src="js/MapManager.js"></script>
+<script src="js/ColorManager.js"></script>
+<script src="js/DispatcherMapManager.js"></script>
 <script src="js/DispatcherSettingsManager.js"></script>
 <script src="js/MonitoringManager.js"></script>
+<script src="js/DispatcherHistoryManager.js"></script>
 <script src="../js/main.js"></script>
 <!-- /template scripts -->
 
 <script>
     $(function(){
-        MM = new MonitoringManager();
-        MM.init();
+        DHM = new DispatcherHistoryManager();
+        DHM.init();
     });
 
 </script>
-
 
 </body>
 <!-- /body -->

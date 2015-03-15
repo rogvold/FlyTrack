@@ -17,6 +17,10 @@ var PilotDashboardManager = function(){
     this.heightsChartManager = new PilotChartManager();
     this.shareManager = new ShareFlightManager();
     this.photoManager = new PhotoManager();
+    this.time = 0;
+    this.timerIntervalId = undefined;
+    this.dt = 1000;
+    this.speed = 1;
 
     this.init = function(){
         initParse();
@@ -190,7 +194,6 @@ var PilotDashboardManager = function(){
             self.currentSessionPoints = arr;
             callback();
         });
-
     }
 
     this.prepareCurrentSessionInfoBlock = function(){
@@ -405,6 +408,11 @@ var PilotDashboardManager = function(){
         });
     }
 
+    this.startTimer = function(){
+        setInterval(function(){
+            self.time = self.time + self.dt;
+        }, self.dt);
+    }
 
 
 }
