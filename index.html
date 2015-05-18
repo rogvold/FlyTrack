@@ -191,6 +191,45 @@
 
     </style>
 
+
+
+    <section class="content-section">
+
+        <div class="container">
+
+            <div class="text-center" >
+                <div class="col-md-4">
+                    <img src="img/banners/enBanner_new.png" id="enBannerImg" style="width: 100%; display: none;" />
+                    <img src="img/banners/ruBanner_new.jpg" id="ruBannerImg" style="width: 100%; " />
+
+                    <br/>
+                    <div class="text-right">
+                        <span>
+                            <a href="javascript: void(0)" class="langButton" id="enButton" >EN</a>
+                            |
+                            <span>
+                                <a href="javascript: void(0)" class="langButton" id="ruButton" >RU</a>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+
+                   <iframe id="videoIframe" style="height: 540px;" src="https://www.youtube.com/embed/HkZkFStJ3us?rel=0" frameborder="0" allowfullscreen="1"></iframe>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
     <section id="how" class="content-section">
         <div class="container">
 
@@ -258,6 +297,23 @@
     <!-- subscribe section -->
 
     <!-- footer -->
+
+
+    <section id="googlePlayBlock" class="content-section">
+        <div class="container">
+
+            <div class="col-md-12 text-center">
+                <h3 class="mb20">
+                    Download app on Google Play
+                </h3>
+                <a href="https://play.google.com/store/apps/details?id=net.flytrack" target="_blank" >
+                    <img src="img/googlePlayLogo.png" style="width: 200px;" />
+                </a>
+            </div>
+
+        </div>
+    </section>
+
     <footer class="content-section">
 
         <div class="container">
@@ -389,6 +445,35 @@
     <!-- page script -->
     <script src="js/subscribe.js"></script>
     <script src="js/demo_home.js"></script>
+
+    <script>
+        function initButtons(){
+            $('#enButton').bind('click', function(){
+                $('#ruBannerImg').hide();
+                $('#enBannerImg').show();
+            });
+
+            $('#ruButton').bind('click', function(){
+                $('#ruBannerImg').show();
+                $('#enBannerImg').hide();
+            });
+
+
+        }
+
+        function updateVideo(){
+            $('#videoIframe').attr('src', 'https://www.youtube.com/embed/HkZkFStJ3us?rel=0');
+        }
+
+        $(function(){
+            initButtons();
+            setTimeout(function(){
+                updateVideo();
+            }, 400);
+        });
+
+    </script>
+
 
     <script type="text/javascript">
         var videobackground = new $.backgroundVideo($('.video-background'), {
